@@ -1,0 +1,82 @@
+<%# ------ RADIO YES/NO ROW ------ %>
+<table class="table table-hover table-radiolist">
+  <tbody>
+    <tr>
+      <td><%= cp.label_tag nil, content: "", class: "" %></td>
+      <td>
+        <label class="radio-inline"><%= cp.radio_button :, content: "true" %>Yes</label>
+        <label class="radio-inline"><%= cp.radio_button :, content: "false" %>No</label>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<%# ------ RADIO BUTTON ------ %>
+<table class="table table-hover table-checklist">
+  <tbody>
+    <tr>
+      <td><%= cp.radio_button :, content: "" %></td>
+      <td><%= cp.label_tag nil, content: "", class: "" %></td>
+    </tr>
+  </tbody>
+</table>
+
+
+<%# ------ TEXT ROW ------ %>
+<table class="table table-hover table-radiolist">
+  <tbody>
+    <tr>
+      <td><%= cp.label_tag nil, content: "", class: "" %></td>
+      <td><%= cp.text_field :, add_class: "input-sm" %></td>
+    </tr>
+  </tbody>
+</table>
+
+
+<%# ------ DROPDOWN ------ %>
+<table class="table table-hover table-radiolist">
+  <tbody>
+    <tr>
+      <td><label></label></td>
+      <td>
+        <%= cp.select :, content: {"- Select -" => "", "" => "" }, add_class: "input-sm" %>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<%# ------ CHECK BOX ------ %>
+<table class="table table-hover table-checklist">
+  <tbody>
+    <tr>
+      <td><%= cp.check_box : %></td>
+      <td><%= cp.label_tag nil, content: "".html_safe, class: "" %></td>
+    </tr>
+  </tbody>
+</table>
+
+
+<%# ------ FULL DIV ------ %>
+<div class="form-group row">
+  <%= cp.label_tag nil, content: ":" %>
+  <%= cp.full_div { cp.text_field : } %>
+</div>
+
+
+<%# ------ HALF DIV ------ %>
+<div class="form-group row">
+  <%= cp.label_tag nil, content: ":" %>
+  <%= cp.half_div { cp.text_field :, placeholder: "" } %>
+  <%= cp.half_div { cp.text_field :, placeholder: "" } %>
+</div>
+<%= cp.select :, content: {"-- Please Select --" => "", "WILL ALLOW" => "true", "WILL NOT ALLOW" => "false"}, add_class: "input-sm input-inline" %>
+
+
+<%# ------ TEXT AREA ------ %>
+<div class="form-group row">
+  <%= cp.label :, content: "" %>
+  <%= cp.full_div do %>
+    <%= cp.text_area :, rows: 3, placeholder: "" %>
+  <% end %>
+</div>
