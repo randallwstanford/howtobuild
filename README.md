@@ -86,7 +86,7 @@ Terminate Server
 
 ### Create a branch for the build
 
-    git checkout -b randall_stanford_[subdomain]_[state_inital]`
+    git checkout -b randall_[subdomain]_[state_inital]
 
 ### Create Nav-bar logo
 
