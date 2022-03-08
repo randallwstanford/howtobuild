@@ -82,7 +82,7 @@ Terminate Server
 
 ### Dump and import the District
 
-    thor database:dump_and_import [subdomain]
+    thor database:dump_and_import [subdomain]_[state_initial]
 
 ### Create a branch for the build
 
